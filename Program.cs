@@ -14,6 +14,7 @@ namespace UniversalSales
             SalesMatrix mySalesMatrix = new SalesMatrix();
             mySalesMatrix.SalesArray = salesArray;
             WriteLine(mySalesMatrix.DisplayAllSales());
+            WriteLine(mySalesMatrix.DisplayMonthlySales(3));
         }
     }
 }
