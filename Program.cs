@@ -1,4 +1,12 @@
-﻿using System;
+﻿/**
+ * ######################################################
+ * ##    Programming Assignment #13                    ##
+ * ##    Developer: Matthew Obert                      ##
+ * ##    Date Submitted: November 30 2019              ##
+ * ##    Purpose: Use two-dimensional array matrix     ##
+ * ######################################################
+ */
+using System;
 using static System.Console;
 
 namespace UniversalSales
