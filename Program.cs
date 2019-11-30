@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace UniversalSales
 {
@@ -6,7 +7,7 @@ namespace UniversalSales
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WriteLine("Hello World!");
         }
     }
 }
