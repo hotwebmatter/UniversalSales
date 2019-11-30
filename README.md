@@ -1,5 +1,7 @@
 # UniversalSales
-Final assignment to be submitted via Blackboard for C# class.
+Final assignment to be submitted via Blackboard for C# class
+
+Demonstrate usage of multi-dimensional array matrices
 
 ## Example output (name not found)
 ```
