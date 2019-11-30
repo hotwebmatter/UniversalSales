@@ -29,15 +29,16 @@ namespace UniversalSales
 
         public string DisplayMonthlySales(int month)
         {
+            if (month < 1 || month > 3)
+            {
+                return String.Format("Invalid input. Month value out of range.\n");
+            }
             double monthlySales = 0;
-            string result = String.Format("************************\n");
             for (int i = 0; i < salesArray.GetLength(0); i++)
             {
                 monthlySales += double.Parse(salesArray[i, month]);
             }
-            result += String.Format("Total for month {0:c}", monthlySales);
-            result += String.Format("\n************************\n");
-            return result;
+            return String.Format("Total for month {0:c}\n", monthlySales);
         }
     }
 }

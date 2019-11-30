@@ -11,10 +11,24 @@ namespace UniversalSales
                                 {"Lee", "17000", "50000", "10000"},
                                 {"Brown", "13000", "25000", "25000"},
                                 {"Cano", "55000", "35000", "30000"} };
+            string userInput = string.Empty;
+            int month = 0;
             SalesMatrix mySalesMatrix = new SalesMatrix();
             mySalesMatrix.SalesArray = salesArray;
             WriteLine(mySalesMatrix.DisplayAllSales());
-            WriteLine(mySalesMatrix.DisplayMonthlySales(3));
+
+            Write("************************\n");
+            Write("Enter sales month (1, 2, or 3): ");
+            userInput = ReadLine();
+            while (int.TryParse(userInput, out month) == false)
+            {
+                // Invalid Input
+                Write("Invalid input. Enter sales month (1, 2, or 3): ");
+                userInput = ReadLine();
+            }
+
+            WriteLine(mySalesMatrix.DisplayMonthlySales(month));
+            Write("************************\n");
         }
     }
 }
