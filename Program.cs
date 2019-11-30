@@ -28,7 +28,10 @@ namespace UniversalSales
             }
 
             WriteLine(mySalesMatrix.DisplayMonthlySales(month));
+
             Write("************************\n");
+            Write("Enter name: ");
+            WriteLine(mySalesMatrix.DisplayPersonSales(ReadLine()));
         }
     }
 }

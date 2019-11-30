@@ -40,5 +40,22 @@ namespace UniversalSales
             }
             return String.Format("Total for month {0:c}\n", monthlySales);
         }
+
+        public string DisplayPersonSales(string person)
+        {
+            for (int i = 0; i < salesArray.GetLength(0); i++)
+            {
+                if (salesArray[i, 0].ToUpper() == person.ToUpper())
+                {
+                    double personSales = 0;
+                    for (int m = 0; m < 3; m++)
+                    {
+                        personSales += double.Parse(salesArray[i, m + 1]);
+                    }
+                    return String.Format("Sales for {0} are {1:c}\n", person.ToUpper(), personSales);
+                }
+            }
+            return string.Format("Name {0} not found", person);
+        }
     }
 }
