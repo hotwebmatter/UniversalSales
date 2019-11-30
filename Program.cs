@@ -21,12 +21,15 @@ namespace UniversalSales
                                 {"Cano", "55000", "35000", "30000"} };
             string userInput = string.Empty;
             int month = 0;
+
+            // instantiate new object of SalesMatrix class
             SalesMatrix mySalesMatrix = new SalesMatrix();
             mySalesMatrix.SalesArray = salesArray;
             WriteLine(mySalesMatrix.DisplayAllSales());
 
             Write("************************\n");
             Write("Enter sales month (1, 2, or 3): ");
+            // Ensure input is an integer
             userInput = ReadLine();
             while (int.TryParse(userInput, out month) == false)
             {
@@ -39,6 +42,7 @@ namespace UniversalSales
 
             Write("************************\n");
             Write("Enter name: ");
+            // no input validation here; accept all strings
             WriteLine(mySalesMatrix.DisplayPersonSales(ReadLine()));
         }
     }
